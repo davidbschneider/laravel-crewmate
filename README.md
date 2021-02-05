@@ -1,5 +1,7 @@
 # Laravel Crewmate
 
+Laravel authentication for a secondary group of users (i.e. admins, team members, employees, etc).
+
 ## Installation
 
 Install this package:

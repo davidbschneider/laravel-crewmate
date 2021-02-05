@@ -1,0 +1,38 @@
+{
+    "name": "davidbschneider/laravel-crewmate",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "David Schneider",
+            "email": "protagonist@davidschneider.info"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "DavidSchneider\\LaravelCrewmate\\": "src",
+            "DavidSchneider\\LaravelCrewmate\\Tests\\": "tests",
+            "DavidSchneider\\LaravelCrewmate\\Database\\Factories\\": "database/factories"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "DavidSchneider\\LaravelCrewmate\\PackageServiceProvider"
+            ]
+        }
+    },
+    "require-dev": {
+        "orchestra/testbench": "^6.11",
+        "phpunit/phpunit": "^9.5",
+        "laravel/legacy-factories": "^1.1"
+    },
+    "scripts": {
+        "post-autoload-dump": [
+            "@php vendor/bin/testbench package:discover --ansi"
+        ],
+        "test": [
+            "vendor/bin/phpunit"
+        ]
+    }
+}
